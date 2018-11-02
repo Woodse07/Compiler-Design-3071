@@ -6,6 +6,7 @@ int yyparse();
 void yyerror(char *s);
 %}
 
+%token LEFT RIGHT
 %token ADD SUB MUL DIV
 %token ONE FOUR FIVE NINE TEN FOURTY FIFTY NINETY HUNDRED FOUR_HUNDRED FIVE_HUNDRED 
 %token NINE_HUNDRED THOUSAND 
@@ -13,7 +14,17 @@ void yyerror(char *s);
 
 %%
 roman_numeral_list: //nothing
- | roman_numeral_list exp EOL { if($2 == 0) printf("Z\n"); else dec_to_roman($2); }
+ | roman_numeral_list prec EOL { if($2 == 0) printf("Z\n"); else dec_to_roman($2); }
+ ;
+
+prec: exp
+ | LEFT exp RIGHT { $$ = $3; }
+ | LEFT exp { yyerror("syntax error\n"); }
+ | exp RIGHT { yyerror("syntax error\n"); }
+ | prec LEFT exp RIGHT { $$ = $1 + $3; }
+ | prec LEFT exp { yyerror("syntax error\n"); }
+ | prec exp RIGHT { yyerror("syntax error\n"); }
+ | prec exp { $$ = $1 + $2; } 
  ;
 
 exp: factor
@@ -23,11 +34,14 @@ exp: factor
 
 factor: numeral
  | factor MUL numeral { $$ = $1 * $3; }
- | factor DIV numeral { $$ = $1 / $3; }
+ | factor DIV numeral { if($3 != 0) $$ = $1 / $3; else yyerror("syntax error\n"); }
  ; 
 
 numeral: term
  | numeral term { if($2 == 1) {if($1 == 4 || $1 == 9) yyerror("syntax error\n"); else $$ = $1 + $2;}
+				  if($2 == 4) {if($1 == 4) yyerror("syntax error\n"); else $$ = $1 + $2;}
+				  if($2 == 5) {if($1 == 5) yyerror("syntax error\n"); else $$ = $1 + $2;}
+				  if($2 == 9) {if($1 == 9) yyerror("syntax error\n"); else $$ = $1 + $2;}
 				  if($2 == 10) {if($1 == 40 || $1 == 90) yyerror("syntax error\n"); else $$ = $1 + $2;}
 				  if($2 == 100) {if($1 == 400 || $1 == 900) yyerror("syntax error\n"); else $$ = $1 + $2;}
 				  $$ = $1 + $2;		  

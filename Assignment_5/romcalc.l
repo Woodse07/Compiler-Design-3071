@@ -1,10 +1,12 @@
 %{
-#include "roman_calc.tab.h"
+#include "romcalc.tab.h"
 void yyerror(char *s);
 %}
 
 %%
 
+"{"	  { return LEFT; }
+"}"	  { return RIGHT; }
 "+"   { return ADD; } 
 "-"   { return SUB; } 
 "*"   { return MUL; } 
