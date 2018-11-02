@@ -17,13 +17,13 @@ roman_numeral_list: //nothing
  ;
 
 exp: factor
- | exp ADD factor { $$ = $1 + $2; }
- | exp SUB factor { $$ = $1 - $2; }
+ | exp ADD factor { printf(""); $$ = $1 + $3; }
+ | exp SUB factor { $$ = $1 - $3; }
  ;
 
 factor: numeral
  | factor MUL numeral { $$ = $1 * $3; }
- | factor DIV numeral { $$ = $1 / $2; }
+ | factor DIV numeral { $$ = $1 / $3; }
  ; 
 
 numeral: term
