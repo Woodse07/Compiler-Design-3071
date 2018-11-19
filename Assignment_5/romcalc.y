@@ -18,13 +18,13 @@ roman_numeral_list: //nothing
  ;
 
 prec: exp
- | LEFT exp RIGHT { $$ = $3; }
+ | LEFT exp RIGHT { $$ = $2; }
  | LEFT exp { yyerror("syntax error\n"); }
  | exp RIGHT { yyerror("syntax error\n"); }
  | prec LEFT exp RIGHT { $$ = $1 + $3; }
  | prec LEFT exp { yyerror("syntax error\n"); }
  | prec exp RIGHT { yyerror("syntax error\n"); }
- | prec exp { $$ = $1 + $2; } 
+ | prec exp { $$ = $2; } 
  ;
 
 exp: factor

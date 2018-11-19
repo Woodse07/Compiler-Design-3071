@@ -437,8 +437,8 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    14,    14,    15,    18,    19,    27,    28,    29,    30,
-      31,    32,    33,    34,    35,    36,    37,    38,    39,    40
+       0,    14,    14,    15,    18,    19,    26,    27,    28,    29,
+      30,    31,    32,    33,    34,    35,    36,    37,    38,    39
 };
 #endif
 
@@ -1226,92 +1226,91 @@ yyreduce:
     { if((yyvsp[0]) == 1) {if((yyvsp[-1]) == 4 || (yyvsp[-1]) == 9) yyerror("syntax error\n"); else (yyval) = (yyvsp[-1]) + (yyvsp[0]);}
 				  if((yyvsp[0]) == 10) {if((yyvsp[-1]) == 40 || (yyvsp[-1]) == 90) yyerror("syntax error\n"); else (yyval) = (yyvsp[-1]) + (yyvsp[0]);}
 				  if((yyvsp[0]) == 100) {if((yyvsp[-1]) == 400 || (yyvsp[-1]) == 900) yyerror("syntax error\n"); else (yyval) = (yyvsp[-1]) + (yyvsp[0]);}
-				  (yyval) = (yyvsp[-1]) + (yyvsp[0]);
-		  
+				  (yyval) = (yyvsp[-1]) + (yyvsp[0]);		  
 				 }
-#line 1233 "roman.tab.c" /* yacc.c:1646  */
+#line 1232 "roman.tab.c" /* yacc.c:1646  */
     break;
 
   case 7:
-#line 28 "roman.y" /* yacc.c:1646  */
+#line 27 "roman.y" /* yacc.c:1646  */
     { (yyval) = 1; }
-#line 1239 "roman.tab.c" /* yacc.c:1646  */
+#line 1238 "roman.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
-#line 29 "roman.y" /* yacc.c:1646  */
+#line 28 "roman.y" /* yacc.c:1646  */
     { (yyval) = 4; }
-#line 1245 "roman.tab.c" /* yacc.c:1646  */
+#line 1244 "roman.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
-#line 30 "roman.y" /* yacc.c:1646  */
+#line 29 "roman.y" /* yacc.c:1646  */
     { (yyval) = 5; }
-#line 1251 "roman.tab.c" /* yacc.c:1646  */
+#line 1250 "roman.tab.c" /* yacc.c:1646  */
     break;
 
   case 10:
-#line 31 "roman.y" /* yacc.c:1646  */
+#line 30 "roman.y" /* yacc.c:1646  */
     { (yyval) = 9; }
-#line 1257 "roman.tab.c" /* yacc.c:1646  */
+#line 1256 "roman.tab.c" /* yacc.c:1646  */
     break;
 
   case 11:
-#line 32 "roman.y" /* yacc.c:1646  */
+#line 31 "roman.y" /* yacc.c:1646  */
     { (yyval) = 10; }
-#line 1263 "roman.tab.c" /* yacc.c:1646  */
+#line 1262 "roman.tab.c" /* yacc.c:1646  */
     break;
 
   case 12:
-#line 33 "roman.y" /* yacc.c:1646  */
+#line 32 "roman.y" /* yacc.c:1646  */
     { (yyval) = 40; }
-#line 1269 "roman.tab.c" /* yacc.c:1646  */
+#line 1268 "roman.tab.c" /* yacc.c:1646  */
     break;
 
   case 13:
-#line 34 "roman.y" /* yacc.c:1646  */
+#line 33 "roman.y" /* yacc.c:1646  */
     { (yyval) = 50; }
-#line 1275 "roman.tab.c" /* yacc.c:1646  */
+#line 1274 "roman.tab.c" /* yacc.c:1646  */
     break;
 
   case 14:
-#line 35 "roman.y" /* yacc.c:1646  */
+#line 34 "roman.y" /* yacc.c:1646  */
     { (yyval) = 90; }
-#line 1281 "roman.tab.c" /* yacc.c:1646  */
+#line 1280 "roman.tab.c" /* yacc.c:1646  */
     break;
 
   case 15:
-#line 36 "roman.y" /* yacc.c:1646  */
+#line 35 "roman.y" /* yacc.c:1646  */
     { (yyval) = 100; }
-#line 1287 "roman.tab.c" /* yacc.c:1646  */
+#line 1286 "roman.tab.c" /* yacc.c:1646  */
     break;
 
   case 16:
-#line 37 "roman.y" /* yacc.c:1646  */
+#line 36 "roman.y" /* yacc.c:1646  */
     { (yyval) = 400; }
-#line 1293 "roman.tab.c" /* yacc.c:1646  */
+#line 1292 "roman.tab.c" /* yacc.c:1646  */
     break;
 
   case 17:
-#line 38 "roman.y" /* yacc.c:1646  */
+#line 37 "roman.y" /* yacc.c:1646  */
     { (yyval) = 500; }
-#line 1299 "roman.tab.c" /* yacc.c:1646  */
+#line 1298 "roman.tab.c" /* yacc.c:1646  */
     break;
 
   case 18:
-#line 39 "roman.y" /* yacc.c:1646  */
+#line 38 "roman.y" /* yacc.c:1646  */
     { (yyval) = 900; }
-#line 1305 "roman.tab.c" /* yacc.c:1646  */
+#line 1304 "roman.tab.c" /* yacc.c:1646  */
     break;
 
   case 19:
-#line 40 "roman.y" /* yacc.c:1646  */
+#line 39 "roman.y" /* yacc.c:1646  */
     { (yyval) = 1000; }
-#line 1311 "roman.tab.c" /* yacc.c:1646  */
+#line 1310 "roman.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1315 "roman.tab.c" /* yacc.c:1646  */
+#line 1314 "roman.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1539,7 +1538,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 43 "roman.y" /* yacc.c:1906  */
+#line 42 "roman.y" /* yacc.c:1906  */
 
 
 int main()
